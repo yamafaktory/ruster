@@ -7,6 +7,7 @@ services:
 
 before_install:
   - mkdir -p ~/ruster/src
+  - touch ~/ruster/Cargo.toml
   - echo "fn main() { println!(\"Hello from ruster!\") }" > ~/ruster/src/main.rs
   - docker build -t yamafaktory/ruster .
 
