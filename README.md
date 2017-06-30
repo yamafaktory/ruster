@@ -28,7 +28,7 @@ docker build -t yamafaktory/ruster .
 
 ## Running the Docker image as a container
 
-To run *cargo* in your project, you need to mount the host directory where your project is located (e.g. `/path/to/your/project`) as a data volume in the container (`:/ruster` - this name is set in the Dockerfile so please do not modify it!) by running for example the following command:
+To run any *cargo* command in your project, you need to mount the host directory where your project is located (e.g. `/path/to/your/project`) as a data volume in the container (`:/ruster` - this name is set in the Dockerfile so please do not modify it!) by running for example the following command:
 
 ```bash
 docker run --rm -it -v /path/to/your/project:/ruster yamafaktory/ruster cargo run
