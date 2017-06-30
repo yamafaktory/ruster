@@ -1,0 +1,14 @@
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - mkdir -p ~/ruster/src
+  - echo "fn main() { println!(\"Hello from ruster!\") }" > ~/ruster/src/main.rs
+  - docker build -t yamafaktory/ruster .
+
+script:
+  - docker run --rm -it -v ~/ruster/main.rs:/ruster yamafaktory/ruster cargo run
