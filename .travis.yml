@@ -11,4 +11,4 @@ before_install:
   - docker build -t yamafaktory/ruster .
 
 script:
-  - docker run --rm -it -v ~/ruster/main.rs:/ruster yamafaktory/ruster cargo run
+  - docker run --rm -it -v ~/ruster:/ruster yamafaktory/ruster cargo run
